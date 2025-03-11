@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Ultra Modern SEO Yapısı -->
+    <title>Antalya'nın Devrimci Oto Tamir Deneyimi | Voltran Motor Teknolojileri</title>
+    <meta name="description" content="Antalya'da araç teknolojisi ve sanatın buluştuğu tamir deneyimi. Akıllı diagnostik sistemler, holografik arıza tespiti ve quantum temizlik teknolojisi.">
+    
+    <!-- 3D Efekt için Kütüphane -->
+    <script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" type="module"></script>
+
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --cyber-red: #ff003c;
+            --matrix-green: #00ff9d;
+            --bg-dark: #0a0a0f;
+            --bg-light: #f0f0f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--neon-blue);
+            overflow-x: hidden;
+        }
+
+        .cyber-border {
+            position: relative;
+            border: 3px solid var(--cyber-red);
+            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+        }
+
+        /* Holografik Header */
+        .hologram-header {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hologram-header::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, var(--neon-blue), transparent 50%),
+                       linear-gradient(-45deg, var(--cyber-red), transparent 50%);
+            animation: hologram 8s infinite linear;
+        }
+
+        @keyframes hologram {
+            0% { transform: rotate(0deg) translate(-50%, -50%); }
+            100% { transform: rotate(360deg) translate(-50%, -50%); }
+        }
+
+        /* Quantum Servis Kartları */
+        .quantum-card {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--matrix-green);
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .quantum-card:hover {
+            transform: rotateX(15deg) rotateY(15deg) translateZ(20px);
+        }
+
+        /* Parçacık Efektli Buton */
+        .particle-button {
+            position: relative;
+            overflow: hidden;
+            background: none;
+            border: 2px solid var(--neon-blue);
+            padding: 1rem 2rem;
+            color: var(--neon-blue);
+            cursor: pointer;
+        }
+
+        .particle-button::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, var(--neon-blue) 10%, transparent 11%);
+            background-size: 10px 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .particle-button:hover::after {
+            opacity: 0.3;
+        }
+
+        /* Devrimci Hizmet Grid */
+        .service-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        /* 3D Motor Model Görüntüleyici */
+        model-viewer {
+            width: 100%;
+            height: 600px;
+            --poster-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hologram Header -->
+    <header class="hologram-header">
+        <div class="cyber-border" style="padding: 2rem; z-index: 1;">
+            <h1 style="font-size: 4rem; text-shadow: 0 0 20px var(--neon-blue);">
+                VOLTRAN<span style="color: var(--cyber-red);">//</span>TECH
+            </h1>
+            <p style="color: var(--matrix-green);">ANTALYA'NIN YENİ NESİL OTO TEKNOLOJİ MERKEZİ</p>
+        </div>
+    </header>
+
+    <!-- 3D Motor Model -->
+    <model-viewer 
+        alt="3D Motor Modeli"
+        src="/assets/motor.glb"
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        environment-image="neutral"
+        auto-rotate
+        camera-controls>
+    </model-viewer>
+
+    <!-- Quantum Hizmetler -->
+    <section class="service-matrix">
+        <div class="quantum-card">
+            <h3>Bilgisayarlı Arıza Tespiti</h3>
+            <p>Arızanızı Bilgisayar ile tespit edip en uygun çözümü sağlıyoruz</p>
+        </div>
+        
+        <div class="quantum-card">
+            <h3>Her marka aracınız için çözümler üretmek istiyoruz</h3>
+            <p>Öncesinde telefon ile bilgi alarak her marka ve modelden araçlarınıza uygun çözümler üretmek gibi bir gaye taşımaktayız. </p>
+        </div>
+
+        <div class="quantum-card">
+            <h3>ANTALYA YAĞ VE FİLTRE DEĞİŞİKLİĞİ</h3>
+            <p>Her bütçeye uygun seçenekler</p>
+        </div>
+    </section>
+
+    <!-- Dinamik Veri Yükleme -->
+    <script type="module">
+        // GSAP Animasyon Kütüphanesi
+        import { gsap } from "https://cdn.skypack.dev/gsap@3.10.4";
+        
+        // Hologram Efekt
+        document.querySelectorAll('.quantum-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+            });
+        });
+
+        // Google Sheets Entegrasyonu
+        const loadServices = async () => {
+            const response = await fetch('SCRIPT_URL');
+            const services = await response.json();
+            
+            const matrix = document.querySelector('.service-matrix');
+            services.forEach(service => {
+                const card = document.createElement('div');
+                card.className = 'quantum-card';
+                card.innerHTML = `
+                    <h3>${service.title}</h3>
+                    <p>${service.description}</p>
+                    <div class="tech-tags">${service.tags}</div>
+                `;
+                matrix.appendChild(card);
+            });
+        }
+
+        // Tema Değiştirme
+        const toggleTheme = () => {
+            document.documentElement.setAttribute('data-theme',
+                document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+            );
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            gsap.from('.quantum-card', {
+                duration: 1,
+                opacity: 0,
+                y: 100,
+                stagger: 0.1
+            });
+            
+            loadServices();
+        });
+    </script>
+</body>
+</html>
