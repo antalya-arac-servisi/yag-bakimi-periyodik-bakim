@@ -859,7 +859,223 @@ Sürdürülebilirlik:
     #map {
         height: 400px;
     }
+/*SOCIAL BUTTON*/
+#social {
+  left: 35px;
+  bottom: 35px;
+  position: fixed;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 99;
+}
+#icons a {
+  height: 0;
+  opacity: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 5px;
+  pointer-events: none;
+  text-decoration: none;
+  transition: all 0.2s linear 0s;
+}
+#icons.active a {
+  opacity: 1;
+  height: 60px;
+  pointer-events: auto;
+}
+#tl, #wa, #vb, #fb, #vk, #ml, #ms {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+#tl, #tl + .title {background: #44B4F4;}
+#wa, #wa + .title {background: #00D1B5;}
+#vb, #vb + .title {background: #AB74D4;}
+#fb, #fb + .title {background: linear-gradient(203.03deg, #FC5C73 6.71%, #963AFD 53.43%, #178AFF 89.56%);}
+#vk, #vk + .title {background: #2787F5;}
+#ml, #ml + .title {background: #4075FF;}
+#ms {
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  background: #07BB07;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: all 0.2s linear 0s;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+#ms.active {
+  transform: rotate(180deg);
+  background-color: #FFFFFF !important;
+  box-shadow: 0px 0px 12px rgba(7, 187, 7, 0.5);
+  background-image: url(../img/icons/cl.svg) !important;
+}
+#ms #wrap {
+  left: 0;
+  display: flex;
+  position: absolute;
+  transition: all 0.15s linear 0s;
+}
+#ms.active #wrap {
+  opacity: 0;
+}
+#ms #wrap div,
+#ms span {
+  width: 70px;
+  height: 70px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+#ms span {
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+}
+#icons .title {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 11px;
+  font: 11px/21px Tahoma;
+  transition: all 0.1s linear 0s;
+}
+#icons .title.active {
+  opacity: 1;
+  width: 85px;
+  margin-left: 15px;
+}
 
+/*CALL BUTTON*/
+.mobile-call-btn{
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(243, 197, 78);
+     background-color: #fff;
+     border: 2px solid #49B8B8;;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+    color:#49B8B8;
+    font-size: 20px;
+   text-align: center;
+   z-index: 10;
+   box-sizing: border-box;
+   
+}
+.mobile-call-btn:hover{
+    color: #000;
+}
+
+.mobile-call-btn i{
+    display: inline-block;
+  z-index: 2;
+  position: relative;
+  top: 2px;
+}
+.mobile-call-btn svg{
+  width: 26px;
+  
+}
+.mobile-call-btn:before,
+.mobile-call-btn:after{
+    content: '';
+    width: 70px;
+    height: 70px;
+    position: absolute;
+   border-radius: 50%;
+   border: 1px solid #49B8B8;
+   top: 50%;
+   left: 50%;
+   z-index: -1;
+   -webkit-transform: translate(-50%, -50%);
+       -ms-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
+  -webkit-animation-duration:  1.8s;
+          animation-duration:  1.8s; 
+  -webkit-animation-iteration-count: infinite; 
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function:  linear;
+          animation-timing-function:  linear;
+}
+.mobile-call-btn:before{
+    width: 90px;
+    height: 90px;
+}
+@media(max-width: 1023px) {
+    .mobile-call-btn{
+       width: 70px;
+       height: 70px; 
+       right: 35px;
+    bottom: 35px;
+    }
+    .mobile-call-btn:before,
+    .mobile-call-btn:after{
+        width: 70px;
+        height: 70px;
+    }
+    .mobile-call-btn:before{
+        width: 90px;
+        height: 90px;
+    }
+    .mobile-call-btn svg{
+  width: 26px;
+  
+}
+}
+@-webkit-keyframes pulse{
+  0%{
+   -webkit-transform: translate(-50%, -50%) scale(.5);
+    -ms-transform: translate(-50%, -50%) scale(.5);
+           transform: translate(-50%, -50%) scale(.5);
+  }
+  
+  
+   
+    100%{
+      -webkit-transform: translate(-50%, -50%) scale(1.1);
+       -ms-transform: translate(-50%, -50%) scale(1.1);
+              transform: translate(-50%, -50%) scale(1.1);
+    }
+
+  }
+  
+@keyframes pulse{
+  0%{
+   -webkit-transform: translate(-50%, -50%) scale(.5);
+    -ms-transform: translate(-50%, -50%) scale(.5);
+           transform: translate(-50%, -50%) scale(.5);
+  }
+  
+   
+    100%{
+      -webkit-transform: translate(-50%, -50%) scale(1.1);
+       -ms-transform: translate(-50%, -50%) scale(1.1);
+              transform: translate(-50%, -50%) scale(1.1);
+              opacity: 0;
+    }
+
+  }
 
     </style>
 </head>
@@ -910,6 +1126,14 @@ Sürdürülebilirlik:
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6381.20054423914!2d30.639425479234916!3d36.89990980278741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c3912babff320d%3A0xdeb82b3dfd4f3e0d!2sCar%20Servis!5e0!3m2!1str!2str!4v1741729557003!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</iframe>
 					</div></div>
+	<!--BUTTON CALL PHONE -->
+<a href="tel:05457120615" class="mobile-call-btn">
+  <i>
+      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+        </svg>  
+  </i>
+</a>
     <!-- Dinamik Veri Yükleme -->
     <script type="module">
         // GSAP Animasyon Kütüphanesi
@@ -963,5 +1187,52 @@ Sürdürülebilirlik:
             loadServices();
         });
     </script>
+	  <script>
+	//Vidget Social Button
+function (){
+  $("#ms span").click(function(){
+    $("#icons, #ms").toggleClass("active");
+  });
+  $("#icons a").hover(
+    function(){$(this).find(".title").addClass("active");},
+    function(){$(this).find(".title").removeClass("active");}
+  );
+  
+  var i = 1;
+  var bias = 0;
+  var step = 70;
+  var backgrounds = [];
+  var maincolor = $("#ms").css("background-color");
+  
+  var iblocks = '<div style="background: url(assets/template/img/icons/ms.svg)"></div>';
+  $("#icons img").each(function(){
+    
+    if($(this).parent().css("background-image") == "none"){backgrounds.push($(this).parent().css("background-color"));}
+    else{backgrounds.push($(this).parent().css("background-image"));}
+    
+    iblocks = iblocks + '<div style="background: url(' + $(this).attr("src") + ')"></div>';
+  });
+  
+  var counter = iblocks.split('style').length - 1;
+  $("#ms").prepend('<div id="wrap" style="width: ' + (step * counter) + 'px">' + iblocks + '</div>');
+  
+  setInterval(function(){
+    if(i == counter){i = 0;}
+    bias = -step * i++;
+    
+    if(!bias){
+      $("#wrap").css({"left": (-step * counter) + "px"});
+      setTimeout(function(){$("#wrap").css({"transition-duration": "0s", "background": maincolor, "left": step + "px"});}, 20);
+      setTimeout(function(){$("#wrap").css({"transition-duration": "0.15s", "left": "0"});}, 50);
+    }
+    else {
+      if(backgrounds[i - 2].split('gradient').length - 1){$("#ms").css("background", backgrounds[i - 1]);}
+      else if(!backgrounds[i - 1]){$("#ms").css("background", maincolor);}
+      
+      $("#wrap").css({"left": bias + "px", "background": backgrounds[i - 2]});
+    }
+  }, 2500);
+};
+		    </script>
 </body>
 </html>
