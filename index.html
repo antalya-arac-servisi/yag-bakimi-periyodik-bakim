@@ -57,28 +57,8 @@ function (){
   }, 2500);
 };
 		    </script>
-    <style>
-    <style>
-        :root {
-            --neon-blue: #00f3ff;
-            --cyber-red: #ff003c;
-            --matrix-green: #00ff9d;
-            --bg-dark: #0a0a0f;
-            --bg-light: #f0f0f5;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        body {
-            background: var(--bg-dark);
-            color: var(--neon-blue);
-            overflow-x: hidden;
-        }
+    <style>
 .phone-button {
   position: fixed;
   bottom: 65px;
@@ -123,556 +103,701 @@ function (){
     width: 30px;
     height: 30px;
   }
-        .cyber-border {
-            position: relative;
-            border: 3px solid var(--cyber-red);
-            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
-        }
-
-        /* Holografik Header */
-        .hologram-header {
-            height: 100vh;
-            display: grid;
-            place-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hologram-header::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, var(--neon-blue), transparent 50%),
-                       linear-gradient(-45deg, var(--cyber-red), transparent 50%);
-            animation: hologram 8s infinite linear;
-        }
-
-        @keyframes hologram {
-            0% { transform: rotate(0deg) translate(-50%, -50%); }
-            100% { transform: rotate(360deg) translate(-50%, -50%); }
-        }
-
-        /* Quantum Servis Kartları */
-        .quantum-card {
-            background: rgba(10, 10, 15, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--matrix-green);
-            transform-style: preserve-3d;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .quantum-card:hover {
-            transform: rotateX(15deg) rotateY(15deg) translateZ(20px);
-        }
-
-        /* Parçacık Efektli Buton */
-        .particle-button {
-            position: relative;
-            overflow: hidden;
-            background: none;
-            border: 2px solid var(--neon-blue);
-            padding: 1rem 2rem;
-            color: var(--neon-blue);
-            cursor: pointer;
-        }
-
-        .particle-button::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, var(--neon-blue) 10%, transparent 11%);
-            background-size: 10px 10px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .particle-button:hover::after {
-            opacity: 0.3;
-        }
-
-        /* Devrimci Hizmet Grid */
-        .service-matrix {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-        }
-
-        /* 3D Motor Model Görüntüleyici */
-        model-viewer {
-            width: 100%;
-            height: 600px;
-            --poster-color: transparent;
-        }
-        .contentShow {
-	height: 500px;
-    margin: auto;
-	padding: 1px 0px;
-    width: 1180px;
-}
-
-.showBox {
-	float: left;
-	height: 450px;
-	margin: 25px;
-	width: 540px;
-}
-
-.showBox img {
-	width: 100%;
-	height: 100%;
-}
-	    @media screen and (max-width: 1200px) {
-    /* ----- NavBar ----- */
-    .navText {
-        width: 980px;
-    }
-
-    /* ----- main ----- */
-    .content {
-        width: 980px;
-    }
-
-    /* ----- About ----- */
-    .aContentBox {
-        width: 470px;
-    }
-
-    /* ----- Services ----- */
-    .sContentBox {
-        width: 236px;
-    }
-	
-	/* ----- Contact Us ----- */
-    .contentShow {
-		width: 980px;
-	}
-	
-	.showBox {
-		width: 440px;
-	}
-
-    /* ----- Footer ----- */
-    .footBox {
-        width: 316px;
-    }
-}
-
-@media screen and (max-width: 990px) {
-	/* ----- Presets ----- */
-	p {
-		font-size: 12px;
-	}
-
-	/* ----- NavBar ----- */
-    .navText {
-        width: 750px;
-    }
-
-	h1 {
-		font-size: 24px;
-	}
-
-	li a {
-		font-size: 12px;
-	}
-
-	/* ----- Heading ----- */
-	h2 {
-		font-size: 38px;
-	}
-
-	/* ----- main ----- */
-	.heading {
-		width: 750px;
-	}
-
-	.heading h3 {
-		font-size: 48px;
-	}
-
-	.content {
-		width: 750px;
-	}
-
-	/* ----- About ----- */
-	.aContentBox {
-		width: 355px;
-	}
-
-	h5 {
-		font-size: 13px;
-	}
-
-	/* ----- Services ----- */
-    .sContentBox {
-		margin: 10px 25px;
-        width: 200px;
-    }
-
-	.sContentBox h4 {
-		font-size: 20px;
-	}
-	
-	/* ----- Contact Us ----- */
-	.contact {
-		height: 800px;
-	}
-	
-	.contentShow {
-		height: 400px;
-		width: 750px;
-	}
-	
-	.showBox {
-		margin: 10px;
-		height: 350px;
-		width: 350px;
-	}
-
-	/* ----- Footer ----- */
-    .footBox {
-		margin: 5px 20px;
-        width: 210px;
-    }
-
-	.footBox h4 {
-	    font-size: 20px;
-	}
-}
-
-@media screen and (max-width: 767px) {
-    /* ----- NavBar ----- */
-    nav {
-        height: 80px;
-        width: 100%;
-    }
-
-    .deskNav {
-        display: none;
-    }
-
-    .navText {
-        margin-top: 20px;
-    }
-
-    h1 {
-        display: none;
-    }
-
-    ul {
-        display: none;
-    }
-
-    .mobileNav {
-        display: block;
-        overflow: hidden;
-        padding-top: 20px;
-    }
-
-    .mobileNav h1 {
-        display: inline;
-        padding-left: 15px;
-    }
-
-    .mobileNav a {
-        color: #F2F2F2;
-        display: none;
-        float: left;
-        font-size: 17px;
-        padding: 14px 16px;
-        text-align: center;
-        text-decoration: none;
-    }
-
-    .mobileNav a.icon {
-        border: none;
-        display: block;
-        float: right;
-        padding-top: 5px;
-    }
-
-    /* onClick */
-    .mobileNav.responsive {
-        background-color: #111;
-        position: relative;
-    }
-
-    .mobileNav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .mobileNav.responsive a {
-        display: block;
-        float: none;
-        text-align: center;
-    }
-
-    .mobileNav.responsive a:hover {
-        background-color: #D01A1A;
-    }
-
-    .mobileNav.responsive h1 {
-        display: none;
-    }
-
-	/* ----- Heading ----- */
-	h2 {
-		font-size: 28px;
-	}
-
-    /* ----- main ----- */
-    .sec {
-        height: 1100px;
-    }
-
-    .heading {
-        width: 100%;
-    }
-
-    .heading p {
-        margin: auto;
-        width: 95%;
-    }
-
-    .content {
-        margin: auto;
-        width: 95%;
-    }
-
-    /* ----- About ----- */
-    .about .content {
-        height: 800px;
-    }
-
-    .aContentBox {
-        float: none;
-        height: 500px;
-        margin: 0;
-        width: 100%;
-    }
-
-    #aPic {
-        height: auto;
-    }
-
-    .aContentBox img {
-        max-width: 760px;
-    }
-
-    #text {
-        height: 280px;
-        margin-top: 15px;
-        padding-left: 3px;
-    }
-
-    /* ----- Services ----- */
-    #serv {
-        height: 1000px;
-    }
-
-    #serv .content {
-        height: 600px;
-    }
-
-    .sContentBox {
-        float: none;
-        height: 100px;
-        margin: 0px auto 0px;
-        width: 95%;
-    }
-
-    .sContentBox h4 {
-        margin: 0px 0px 10px;
-    }
-
-    /* ----- Contact Us ----- */
-    .contact {
-        height: 1400px;
-    }
-
-    .contentShow {
-        height: 1100px;
-        margin: auto;
-        width: 95%;
-    }
-
-    .showBox {
-        float: none;
-        height: 500px;
-        margin: 0px 0px 20px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .showBox img {
-        max-width: 500px;
-        height: auto;
-    }
-
-    .showBox iframe {
-        max-width: 500px;
-    }
-
-    /* ----- Footer ----- */
-    footer {
-        height: 500px;
-    }
-
-    footer .content {
-        margin: 60px auto 0px;
-        height: 400px;
-        width: 95%;
-    }
-
-    .footBox {
-        float: none;
-        height: 120px;
-        margin: 0px;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* ----- Heading ----- */
-    header {
-        height: 600px;
-    }
-
-    /* ----- main ----- */
-    .sec {
-        height: 950px;
-    }
-
-    /* ----- About ----- */
-    .about .content {
-        height: auto;
-    }
-
-    #text {
-        height: auto;
-    }
-
-    /* ----- Services ----- */
-    #serv {
-        height: 950px;
-    }
-
-    /* ----- Contact Us ----- */
-    .contact {
-        height: auto;
-        margin-bottom: 60px;
-    }
-
-    .contentShow {
-        height: auto;
-    }
-
-    #shop {
-        height: auto;
-    }
-
-    #map {
-        height: 400px;
-    }
-/*SOCIAL BUTTON*/
-#social {
-  left: 35px;
-  bottom: 35px;
-  position: fixed;
-  -webkit-tap-highlight-color: transparent;
-  z-index: 99;
-}
-#icons a {
-  height: 0;
-  opacity: 0;
-  color: white;
-  display: flex;
-  align-items: center;
-  margin: 0 0 10px 5px;
-  pointer-events: none;
-  text-decoration: none;
-  transition: all 0.2s linear 0s;
-}
-#icons.active a {
-  opacity: 1;
-  height: 60px;
-  pointer-events: auto;
-}
-#tl, #wa, #vb, #fb, #vk, #ml, #ms {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-}
-#tl, #tl + .title {background: #44B4F4;}
-#wa, #wa + .title {background: #00D1B5;}
-#vb, #vb + .title {background: #AB74D4;}
-#fb, #fb + .title {background: linear-gradient(203.03deg, #FC5C73 6.71%, #963AFD 53.43%, #178AFF 89.56%);}
-#vk, #vk + .title {background: #2787F5;}
-#ml, #ml + .title {background: #4075FF;}
-#ms {
-  width: 70px;
-  height: 70px;
-  margin-top: 20px;
-  overflow: hidden;
-  position: relative;
-  background: #07BB07;
-  align-items: flex-start;
-  justify-content: flex-start;
-  transition: all 0.2s linear 0s;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-}
-#ms.active {
-  transform: rotate(180deg);
-  background-color: #FFFFFF !important;
-  box-shadow: 0px 0px 12px rgba(7, 187, 7, 0.5);
-  background-image: url(../img/icons/cl.svg) !important;
-}
-#ms #wrap {
-  left: 0;
-  display: flex;
-  position: absolute;
-  transition: all 0.15s linear 0s;
-}
-#ms.active #wrap {
-  opacity: 0;
-}
-#ms #wrap div,
-#ms span {
-  width: 70px;
-  height: 70px;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-}
-#ms span {
-  z-index: 1;
-  cursor: pointer;
-  position: absolute;
-  border-radius: 50%;
-}
-#icons .title {
-  width: 0;
-  opacity: 0;
-  overflow: hidden;
-  text-align: center;
-  white-space: nowrap;
-  border-radius: 11px;
-  font: 11px/21px Tahoma;
-  transition: all 0.1s linear 0s;
-}
-#icons .title.active {
-  opacity: 1;
-  width: 85px;
-  margin-left: 15px;
-}
-    </style>
+        :root {
+             --neon-blue: #00f3ff;
+             --cyber-red: #ff003c;
+             --matrix-green: #00ff9d;
+             --bg-dark: #0a0a0f;
+             --bg-light: #f0f0f5;
+         }
+ 
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             font-family: 'Space Grotesk', sans-serif;
+         }
+ 
+         body {
+             background: var(--bg-dark);
+             color: var(--neon-blue);
+             overflow-x: hidden;
+         }
+ 
+         .cyber-border {
+             position: relative;
+             border: 3px solid var(--cyber-red);
+             clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+         }
+ 
+         /* Holografik Header */
+         .hologram-header {
+             height: 100vh;
+             display: grid;
+             place-items: center;
+             position: relative;
+             overflow: hidden;
+         }
+ 
+         .hologram-header::before {
+             content: '';
+             position: absolute;
+             width: 200%;
+             height: 200%;
+             background: linear-gradient(45deg, var(--neon-blue), transparent 50%),
+                        linear-gradient(-45deg, var(--cyber-red), transparent 50%);
+             animation: hologram 8s infinite linear;
+         }
+ 
+         @keyframes hologram {
+             0% { transform: rotate(0deg) translate(-50%, -50%); }
+             100% { transform: rotate(360deg) translate(-50%, -50%); }
+         }
+ 
+         /* Quantum Servis Kartları */
+         .quantum-card {
+             background: rgba(10, 10, 15, 0.95);
+             backdrop-filter: blur(10px);
+             border: 1px solid var(--matrix-green);
+             transform-style: preserve-3d;
+             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+         }
+ 
+         .quantum-card:hover {
+             transform: rotateX(15deg) rotateY(15deg) translateZ(20px);
+         }
+ 
+         /* Parçacık Efektli Buton */
+         .particle-button {
+             position: relative;
+             overflow: hidden;
+             background: none;
+             border: 2px solid var(--neon-blue);
+             padding: 1rem 2rem;
+             color: var(--neon-blue);
+             cursor: pointer;
+         }
+ 
+         .particle-button::after {
+             content: '';
+             position: absolute;
+             width: 100%;
+             height: 100%;
+             background: radial-gradient(circle, var(--neon-blue) 10%, transparent 11%);
+             background-size: 10px 10px;
+             opacity: 0;
+             transition: opacity 0.3s;
+         }
+ 
+         .particle-button:hover::after {
+             opacity: 0.3;
+         }
+ 
+         /* Devrimci Hizmet Grid */
+         .service-matrix {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+             gap: 2rem;
+             padding: 2rem;
+         }
+ 
+         /* 3D Motor Model Görüntüleyici */
+         model-viewer {
+             width: 100%;
+             height: 600px;
+             --poster-color: transparent;
+         }
+         .contentShow {
+ 	height: 500px;
+     margin: auto;
+ 	padding: 1px 0px;
+     width: 1180px;
+ }
+ 
+ .showBox {
+ 	float: left;
+ 	height: 450px;
+ 	margin: 25px;
+ 	width: 540px;
+ }
+ 
+ .showBox img {
+ 	width: 100%;
+ 	height: 100%;
+ }
+ 	    @media screen and (max-width: 1200px) {
+     /* ----- NavBar ----- */
+     .navText {
+         width: 980px;
+     }
+ 
+     /* ----- main ----- */
+     .content {
+         width: 980px;
+     }
+ 
+     /* ----- About ----- */
+     .aContentBox {
+         width: 470px;
+     }
+ 
+     /* ----- Services ----- */
+     .sContentBox {
+         width: 236px;
+     }
+ 
+ 	/* ----- Contact Us ----- */
+     .contentShow {
+ 		width: 980px;
+ 	}
+ 
+ 	.showBox {
+ 		width: 440px;
+ 	}
+ 
+     /* ----- Footer ----- */
+     .footBox {
+         width: 316px;
+     }
+ }
+ 
+ @media screen and (max-width: 990px) {
+ 	/* ----- Presets ----- */
+ 	p {
+ 		font-size: 12px;
+ 	}
+ 
+ 	/* ----- NavBar ----- */
+     .navText {
+         width: 750px;
+     }
+ 
+ 	h1 {
+ 		font-size: 24px;
+ 	}
+ 
+ 	li a {
+ 		font-size: 12px;
+ 	}
+ 
+ 	/* ----- Heading ----- */
+ 	h2 {
+ 		font-size: 38px;
+ 	}
+ 
+ 	/* ----- main ----- */
+ 	.heading {
+ 		width: 750px;
+ 	}
+ 
+ 	.heading h3 {
+ 		font-size: 48px;
+ 	}
+ 
+ 	.content {
+ 		width: 750px;
+ 	}
+ 
+ 	/* ----- About ----- */
+ 	.aContentBox {
+ 		width: 355px;
+ 	}
+ 
+ 	h5 {
+ 		font-size: 13px;
+ 	}
+ 
+ 	/* ----- Services ----- */
+     .sContentBox {
+ 		margin: 10px 25px;
+         width: 200px;
+     }
+ 
+ 	.sContentBox h4 {
+ 		font-size: 20px;
+ 	}
+ 
+ 	/* ----- Contact Us ----- */
+ 	.contact {
+ 		height: 800px;
+ 	}
+ 
+ 	.contentShow {
+ 		height: 400px;
+ 		width: 750px;
+ 	}
+ 
+ 	.showBox {
+ 		margin: 10px;
+ 		height: 350px;
+ 		width: 350px;
+ 	}
+ 
+ 	/* ----- Footer ----- */
+     .footBox {
+ 		margin: 5px 20px;
+         width: 210px;
+     }
+ 
+ 	.footBox h4 {
+ 	    font-size: 20px;
+ 	}
+ }
+ 
+ @media screen and (max-width: 767px) {
+     /* ----- NavBar ----- */
+     nav {
+         height: 80px;
+         width: 100%;
+     }
+ 
+     .deskNav {
+         display: none;
+     }
+ 
+     .navText {
+         margin-top: 20px;
+     }
+ 
+     h1 {
+         display: none;
+     }
+ 
+     ul {
+         display: none;
+     }
+ 
+     .mobileNav {
+         display: block;
+         overflow: hidden;
+         padding-top: 20px;
+     }
+ 
+     .mobileNav h1 {
+         display: inline;
+         padding-left: 15px;
+     }
+ 
+     .mobileNav a {
+         color: #F2F2F2;
+         display: none;
+         float: left;
+         font-size: 17px;
+         padding: 14px 16px;
+         text-align: center;
+         text-decoration: none;
+     }
+ 
+     .mobileNav a.icon {
+         border: none;
+         display: block;
+         float: right;
+         padding-top: 5px;
+     }
+ 
+     /* onClick */
+     .mobileNav.responsive {
+         background-color: #111;
+         position: relative;
+     }
+ 
+     .mobileNav.responsive .icon {
+         position: absolute;
+         right: 0;
+         top: 0;
+     }
+     .mobileNav.responsive a {
+         display: block;
+         float: none;
+         text-align: center;
+     }
+ 
+     .mobileNav.responsive a:hover {
+         background-color: #D01A1A;
+     }
+ 
+     .mobileNav.responsive h1 {
+         display: none;
+     }
+ 
+ 	/* ----- Heading ----- */
+ 	h2 {
+ 		font-size: 28px;
+ 	}
+ 
+     /* ----- main ----- */
+     .sec {
+         height: 1100px;
+     }
+ 
+     .heading {
+         width: 100%;
+     }
+ 
+     .heading p {
+         margin: auto;
+         width: 95%;
+     }
+ 
+     .content {
+         margin: auto;
+         width: 95%;
+     }
+ 
+     /* ----- About ----- */
+     .about .content {
+         height: 800px;
+     }
+ 
+     .aContentBox {
+         float: none;
+         height: 500px;
+         margin: 0;
+         width: 100%;
+     }
+ 
+     #aPic {
+         height: auto;
+     }
+ 
+     .aContentBox img {
+         max-width: 760px;
+     }
+ 
+     #text {
+         height: 280px;
+         margin-top: 15px;
+         padding-left: 3px;
+     }
+ 
+     /* ----- Services ----- */
+     #serv {
+         height: 1000px;
+     }
+ 
+     #serv .content {
+         height: 600px;
+     }
+ 
+     .sContentBox {
+         float: none;
+         height: 100px;
+         margin: 0px auto 0px;
+         width: 95%;
+     }
+ 
+     .sContentBox h4 {
+         margin: 0px 0px 10px;
+     }
+ 
+     /* ----- Contact Us ----- */
+     .contact {
+         height: 1400px;
+     }
+ 
+     .contentShow {
+         height: 1100px;
+         margin: auto;
+         width: 95%;
+     }
+ 
+     .showBox {
+         float: none;
+         height: 500px;
+         margin: 0px 0px 20px;
+         text-align: center;
+         width: 100%;
+     }
+ 
+     .showBox img {
+         max-width: 500px;
+         height: auto;
+     }
+ 
+     .showBox iframe {
+         max-width: 500px;
+     }
+ 
+     /* ----- Footer ----- */
+     footer {
+         height: 500px;
+     }
+ 
+     footer .content {
+         margin: 60px auto 0px;
+         height: 400px;
+         width: 95%;
+     }
+ 
+     .footBox {
+         float: none;
+         height: 120px;
+         margin: 0px;
+         width: 100%;
+     }
+ }
+ 
+ @media screen and (max-width: 480px) {
+     /* ----- Heading ----- */
+     header {
+         height: 600px;
+     }
+ 
+     /* ----- main ----- */
+     .sec {
+         height: 950px;
+     }
+ 
+     /* ----- About ----- */
+     .about .content {
+         height: auto;
+     }
+ 
+     #text {
+         height: auto;
+     }
+ 
+     /* ----- Services ----- */
+     #serv {
+         height: 950px;
+     }
+ 
+     /* ----- Contact Us ----- */
+     .contact {
+         height: auto;
+         margin-bottom: 60px;
+     }
+ 
+     .contentShow {
+         height: auto;
+     }
+ 
+     #shop {
+         height: auto;
+     }
+ 
+     #map {
+         height: 400px;
+     }
+ /*SOCIAL BUTTON*/
+ #social {
+   left: 35px;
+   bottom: 35px;
+   position: fixed;
+   -webkit-tap-highlight-color: transparent;
+   z-index: 99;
+ }
+ #icons a {
+   height: 0;
+   opacity: 0;
+   color: white;
+   display: flex;
+   align-items: center;
+   margin: 0 0 10px 5px;
+   pointer-events: none;
+   text-decoration: none;
+   transition: all 0.2s linear 0s;
+ }
+ #icons.active a {
+   opacity: 1;
+   height: 60px;
+   pointer-events: auto;
+ }
+ #tl, #wa, #vb, #fb, #vk, #ml, #ms {
+   width: 60px;
+   height: 60px;
+   display: flex;
+   border-radius: 50%;
+   align-items: center;
+   justify-content: center;
+ }
+ #tl, #tl + .title {background: #44B4F4;}
+ #wa, #wa + .title {background: #00D1B5;}
+ #vb, #vb + .title {background: #AB74D4;}
+ #fb, #fb + .title {background: linear-gradient(203.03deg, #FC5C73 6.71%, #963AFD 53.43%, #178AFF 89.56%);}
+ #vk, #vk + .title {background: #2787F5;}
+ #ml, #ml + .title {background: #4075FF;}
+ #ms {
+   width: 70px;
+   height: 70px;
+   margin-top: 20px;
+   overflow: hidden;
+   position: relative;
+   background: #07BB07;
+   align-items: flex-start;
+   justify-content: flex-start;
+   transition: all 0.2s linear 0s;
+   background-position: center !important;
+   background-repeat: no-repeat !important;
+ }
+ #ms.active {
+   transform: rotate(180deg);
+   background-color: #FFFFFF !important;
+   box-shadow: 0px 0px 12px rgba(7, 187, 7, 0.5);
+   background-image: url(../img/icons/cl.svg) !important;
+ }
+ #ms #wrap {
+   left: 0;
+   display: flex;
+   position: absolute;
+   transition: all 0.15s linear 0s;
+ }
+ #ms.active #wrap {
+   opacity: 0;
+ }
+ #ms #wrap div,
+ #ms span {
+   width: 70px;
+   height: 70px;
+   background-position: center !important;
+   background-repeat: no-repeat !important;
+ }
+ #ms span {
+   z-index: 1;
+   cursor: pointer;
+   position: absolute;
+   border-radius: 50%;
+ }
+ #icons .title {
+   width: 0;
+   opacity: 0;
+   overflow: hidden;
+   text-align: center;
+   white-space: nowrap;
+   border-radius: 11px;
+   font: 11px/21px Tahoma;
+   transition: all 0.1s linear 0s;
+ }
+ #icons .title.active {
+   opacity: 1;
+   width: 85px;
+   margin-left: 15px;
+ }
+ 
+ /*CALL BUTTON*/
+ .mobile-call-btn{
+     position: fixed;
+     right: 35px;
+     bottom: 35px;
+     width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     background-color: rgb(243, 197, 78);
+      background-color: #fff;
+      border: 2px solid #49B8B8;;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+     color:#49B8B8;
+     font-size: 20px;
+    text-align: center;
+    z-index: 10;
+    box-sizing: border-box;
+ 
+ }
+ .mobile-call-btn:hover{
+     color: #000;
+ }
+ 
+ .mobile-call-btn i{
+     display: inline-block;
+   z-index: 2;
+   position: relative;
+   top: 2px;
+ }
+ .mobile-call-btn svg{
+   width: 26px;
+ 
+ }
+ .mobile-call-btn:before,
+ .mobile-call-btn:after{
+     content: '';
+     width: 70px;
+     height: 70px;
+     position: absolute;
+    border-radius: 50%;
+    border: 1px solid #49B8B8;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+     -webkit-animation-name: pulse;
+             animation-name: pulse;
+   -webkit-animation-duration:  1.8s;
+           animation-duration:  1.8s; 
+   -webkit-animation-iteration-count: infinite; 
+           animation-iteration-count: infinite;
+   -webkit-animation-timing-function:  linear;
+           animation-timing-function:  linear;
+ }
+ .mobile-call-btn:before{
+     width: 90px;
+     height: 90px;
+ }
+ @media(max-width: 1023px) {
+     .mobile-call-btn{
+        width: 70px;
+        height: 70px; 
+        right: 35px;
+     bottom: 35px;
+     }
+     .mobile-call-btn:before,
+     .mobile-call-btn:after{
+         width: 70px;
+         height: 70px;
+     }
+     .mobile-call-btn:before{
+         width: 90px;
+         height: 90px;
+     }
+     .mobile-call-btn svg{
+   width: 26px;
+ 
+ }
+ }
+ @-webkit-keyframes pulse{
+   0%{
+    -webkit-transform: translate(-50%, -50%) scale(.5);
+     -ms-transform: translate(-50%, -50%) scale(.5);
+            transform: translate(-50%, -50%) scale(.5);
+   }
+ 
+ 
+ 
+     100%{
+       -webkit-transform: translate(-50%, -50%) scale(1.1);
+        -ms-transform: translate(-50%, -50%) scale(1.1);
+               transform: translate(-50%, -50%) scale(1.1);
+     }
+ 
+   }
+ 
+ @keyframes pulse{
+   0%{
+    -webkit-transform: translate(-50%, -50%) scale(.5);
+     -ms-transform: translate(-50%, -50%) scale(.5);
+            transform: translate(-50%, -50%) scale(.5);
+   }
+ 
+ 
+     100%{
+       -webkit-transform: translate(-50%, -50%) scale(1.1);
+        -ms-transform: translate(-50%, -50%) scale(1.1);
+               transform: translate(-50%, -50%) scale(1.1);
+               opacity: 0;
+     }
+ 
+   }
+ 
+  
     </style>
 </head>
 <body>
