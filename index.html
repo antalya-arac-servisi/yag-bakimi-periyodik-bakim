@@ -631,9 +631,9 @@ function (){
 .phone-button {
   position: fixed;
   bottom: 65px;
-  right: 25px;
-  width: 60px;
-  height: 60px;
+  right: 35px;
+  width: 70px;
+  height: 70px;
   background: #ff003c;
   border-radius: 50%;
   display: flex;
@@ -641,165 +641,45 @@ function (){
   justify-content: center;
   box-shadow: 0 5px 15px rgba(255,0,60,0.3);
   transition: all 0.3s ease;
-  z-index: 9999999;
+  z-index: 9999;
+  border: none;
+  cursor: pointer;
 }
 
 .phone-button:hover {
-  transform: scale(1.1) rotate(15deg);
-  box-shadow: 0 8px 20px rgba(255,0,60,0.5);
+  transform: scale(1.1);
+  background: #ff335c;
+  box-shadow: 0 8px 25px rgba(255,0,60,0.5);
 }
 
 .phone-icon {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   fill: white;
+  pointer-events: none;
 }
 
-/* Mobil Uyum */
+/* Mobil için */
 @media (max-width: 768px) {
   .phone-button {
     bottom: 65px;
-    right: 15px;
-    width: 55px;
-    height: 55px;
-    z-index: 9999999;
+    right: 25px;
+    width: 60px;
+    height: 60px;
   }
   
   .phone-icon {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
   }
 }
-	
-/*CALL BUTTON*/
-.mobile-call-btn{
-    position: fixed;
-    right: 35px;
-    bottom: 35px;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: rgb(243, 197, 78);
-     background-color: #fff;
-     border: 2px solid #49B8B8;;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-    color:#49B8B8;
-    font-size: 20px;
-   text-align: center;
-   z-index: 10;
-   box-sizing: border-box;
-   
-}
-.mobile-call-btn:hover{
-    color: #000;
-}
-
-.mobile-call-btn i{
-    display: inline-block;
-  z-index: 2;
-  position: relative;
-  top: 2px;
-}
-.mobile-call-btn svg{
-  width: 26px;
-  
-}
-.mobile-call-btn:before,
-.mobile-call-btn:after{
-    content: '';
-    width: 70px;
-    height: 70px;
-    position: absolute;
-   border-radius: 50%;
-   border: 1px solid #49B8B8;
-   top: 50%;
-   left: 50%;
-   z-index: -1;
-   -webkit-transform: translate(-50%, -50%);
-       -ms-transform: translate(-50%, -50%);
-           transform: translate(-50%, -50%);
-    -webkit-animation-name: pulse;
-            animation-name: pulse;
-  -webkit-animation-duration:  1.8s;
-          animation-duration:  1.8s; 
-  -webkit-animation-iteration-count: infinite; 
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function:  linear;
-          animation-timing-function:  linear;
-}
-.mobile-call-btn:before{
-    width: 90px;
-    height: 90px;
-}
-@media(max-width: 1023px) {
-    .mobile-call-btn{
-       width: 70px;
-       height: 70px; 
-       right: 35px;
-    bottom: 35px;
-    }
-    .mobile-call-btn:before,
-    .mobile-call-btn:after{
-        width: 70px;
-        height: 70px;
-    }
-    .mobile-call-btn:before{
-        width: 90px;
-        height: 90px;
-    }
-    .mobile-call-btn svg{
-  width: 26px;
-  
-}
-}
-@-webkit-keyframes pulse{
-  0%{
-   -webkit-transform: translate(-50%, -50%) scale(.5);
-    -ms-transform: translate(-50%, -50%) scale(.5);
-           transform: translate(-50%, -50%) scale(.5);
-  }
-  
-  
-   
-    100%{
-      -webkit-transform: translate(-50%, -50%) scale(1.1);
-       -ms-transform: translate(-50%, -50%) scale(1.1);
-              transform: translate(-50%, -50%) scale(1.1);
-    }
-
-  }
-  
-@keyframes pulse{
-  0%{
-   -webkit-transform: translate(-50%, -50%) scale(.5);
-    -ms-transform: translate(-50%, -50%) scale(.5);
-           transform: translate(-50%, -50%) scale(.5);
-  }
-  
-   
-    100%{
-      -webkit-transform: translate(-50%, -50%) scale(1.1);
-       -ms-transform: translate(-50%, -50%) scale(1.1);
-              transform: translate(-50%, -50%) scale(1.1);
-              opacity: 0;
-    }
-
-  }
-
     </style>
 </head>
 <body>
 		<!--BUTTON CALL PHONE -->
+<!-- HTML Kısmında Değişiklik -->
 <a href="tel:+905457120615" class="phone-button">
-  <svg class="phone-icon" viewBox="0 0 24 24">
+  <svg class="phone-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
   </svg>
 </a>
