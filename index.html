@@ -78,7 +78,50 @@ function (){
             color: var(--neon-blue);
             overflow-x: hidden;
         }
+.phone-button {
+  position: fixed;
+  bottom: 65px;
+  right: 35px;
+  width: 70px;
+  height: 70px;
+  background: #ff003c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(255,0,60,0.3);
+  transition: all 0.3s ease;
+  z-index: 9999;
+  border: none;
+  cursor: pointer;
+}
 
+.phone-button:hover {
+  transform: scale(1.1);
+  background: #ff335c;
+  box-shadow: 0 8px 25px rgba(255,0,60,0.5);
+}
+
+.phone-icon {
+  width: 35px;
+  height: 35px;
+  fill: white;
+  pointer-events: none;
+}
+
+/* Mobil için */
+@media (max-width: 768px) {
+  .phone-button {
+    bottom: 65px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .phone-icon {
+    width: 30px;
+    height: 30px;
+  }
         .cyber-border {
             position: relative;
             border: 3px solid var(--cyber-red);
@@ -628,51 +671,8 @@ function (){
   width: 85px;
   margin-left: 15px;
 }
-.phone-button {
-  position: fixed;
-  bottom: 65px;
-  right: 35px;
-  width: 70px;
-  height: 70px;
-  background: #ff003c;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 5px 15px rgba(255,0,60,0.3);
-  transition: all 0.3s ease;
-  z-index: 9999;
-  border: none;
-  cursor: pointer;
-}
 
-.phone-button:hover {
-  transform: scale(1.1);
-  background: #ff335c;
-  box-shadow: 0 8px 25px rgba(255,0,60,0.5);
-}
 
-.phone-icon {
-  width: 35px;
-  height: 35px;
-  fill: white;
-  pointer-events: none;
-}
-
-/* Mobil için */
-@media (max-width: 768px) {
-  .phone-button {
-    bottom: 65px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-  }
-  
-  .phone-icon {
-    width: 30px;
-    height: 30px;
-  }
-}
     </style>
 </head>
 <body>
