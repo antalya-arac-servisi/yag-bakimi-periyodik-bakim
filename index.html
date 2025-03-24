@@ -4,236 +4,811 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Optimizasyonlu Meta Etiketler -->
-    <title>Antalya Oto Tamir & Periyodik Bakım | Car Servis Profesyonel Hizmet</title>
-    <meta name="description" content="Antalya'da profesyonel oto tamir ve periyodik bakım hizmetleri. Motor arıza tespit, yağ değişimi, Toyota servis ve tüm marka araç bakımı. Hızlı ve güvenilir çözümler.">
-    <meta name="keywords" content="Antalya oto tamir, araç bakım Muratpaşa, motor tamiri Kepez, yağ değişimi Konyaaltı, Toyota servis Antalya">
-
-    <!-- Ortak Stil ve Scriptler -->
+    <!-- Ultra Modern SEO Yapısı -->
+    <title>Antalya'nın Yenilikçi Oto Tamir Deneyimi | Voltran Motor Teknolojileri</title>
+    <meta name="description" content="Antalya'da araç teknolojisi ve sanatın buluştuğu tamir deneyimi. Akıllı diagnostik sistemler, holografik arıza tespiti ve quantum temizlik teknolojisi.">
+     <meta name="index" content="oto tamir Antalya,araç bakım Muratpaşa,motor tamiri Kepez,yağ değişimi Konyaaltı,klima servisi Aksu,kaporta düzeltme Döşemealtı,elektrik arızası Alanya,Sürdürülebilir oto servis">
+    <!-- 3D Efekt için Kütüphane -->
     <script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" type="module"></script>
-    <!-- Mevcut CSS ve Scriptler Aynı Kalacak -->
+  <script>
+	//Vidget Social Button
+function (){
+  $("#ms span").click(function(){
+    $("#icons, #ms").toggleClass("active");
+  });
+  $("#icons a").hover(
+    function(){$(this).find(".title").addClass("active");},
+    function(){$(this).find(".title").removeClass("active");}
+  );
+  
+  var i = 1;
+  var bias = 0;
+  var step = 70;
+  var backgrounds = [];
+  var maincolor = $("#ms").css("background-color");
+  
+  var iblocks = '<div style="background: url(assets/template/img/icons/ms.svg)"></div>';
+  $("#icons img").each(function(){
+    
+    if($(this).parent().css("background-image") == "none"){backgrounds.push($(this).parent().css("background-color"));}
+    else{backgrounds.push($(this).parent().css("background-image"));}
+    
+    iblocks = iblocks + '<div style="background: url(' + $(this).attr("src") + ')"></div>';
+  });
+  
+  var counter = iblocks.split('style').length - 1;
+  $("#ms").prepend('<div id="wrap" style="width: ' + (step * counter) + 'px">' + iblocks + '</div>');
+  
+  setInterval(function(){
+    if(i == counter){i = 0;}
+    bias = -step * i++;
+    
+    if(!bias){
+      $("#wrap").css({"left": (-step * counter) + "px"});
+      setTimeout(function(){$("#wrap").css({"transition-duration": "0s", "background": maincolor, "left": step + "px"});}, 20);
+      setTimeout(function(){$("#wrap").css({"transition-duration": "0.15s", "left": "0"});}, 50);
+    }
+    else {
+      if(backgrounds[i - 2].split('gradient').length - 1){$("#ms").css("background", backgrounds[i - 1]);}
+      else if(!backgrounds[i - 1]){$("#ms").css("background", maincolor);}
+      
+      $("#wrap").css({"left": bias + "px", "background": backgrounds[i - 2]});
+    }
+  }, 2500);
+};
+		    </script>
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --cyber-red: #ff003c;
+            --matrix-green: #00ff9d;
+            --bg-dark: #0a0a0f;
+            --bg-light: #f0f0f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--neon-blue);
+            overflow-x: hidden;
+        }
+
+        .cyber-border {
+            position: relative;
+            border: 3px solid var(--cyber-red);
+            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+        }
+
+        /* Holografik Header */
+        .hologram-header {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hologram-header::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, var(--neon-blue), transparent 50%),
+                       linear-gradient(-45deg, var(--cyber-red), transparent 50%);
+            animation: hologram 8s infinite linear;
+        }
+
+        @keyframes hologram {
+            0% { transform: rotate(0deg) translate(-50%, -50%); }
+            100% { transform: rotate(360deg) translate(-50%, -50%); }
+        }
+
+        /* Quantum Servis Kartları */
+        .quantum-card {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--matrix-green);
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .quantum-card:hover {
+            transform: rotateX(15deg) rotateY(15deg) translateZ(20px);
+        }
+
+        /* Parçacık Efektli Buton */
+        .particle-button {
+            position: relative;
+            overflow: hidden;
+            background: none;
+            border: 2px solid var(--neon-blue);
+            padding: 1rem 2rem;
+            color: var(--neon-blue);
+            cursor: pointer;
+        }
+
+        .particle-button::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, var(--neon-blue) 10%, transparent 11%);
+            background-size: 10px 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .particle-button:hover::after {
+            opacity: 0.3;
+        }
+
+        /* Devrimci Hizmet Grid */
+        .service-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        /* 3D Motor Model Görüntüleyici */
+        model-viewer {
+            width: 100%;
+            height: 600px;
+            --poster-color: transparent;
+        }
+        .contentShow {
+	height: 500px;
+    margin: auto;
+	padding: 1px 0px;
+    width: 1180px;
+}
+
+.showBox {
+	float: left;
+	height: 450px;
+	margin: 25px;
+	width: 540px;
+}
+
+.showBox img {
+	width: 100%;
+	height: 100%;
+}
+	    @media screen and (max-width: 1200px) {
+    /* ----- NavBar ----- */
+    .navText {
+        width: 980px;
+    }
+
+    /* ----- main ----- */
+    .content {
+        width: 980px;
+    }
+
+    /* ----- About ----- */
+    .aContentBox {
+        width: 470px;
+    }
+
+    /* ----- Services ----- */
+    .sContentBox {
+        width: 236px;
+    }
+	
+	/* ----- Contact Us ----- */
+    .contentShow {
+		width: 980px;
+	}
+	
+	.showBox {
+		width: 440px;
+	}
+
+    /* ----- Footer ----- */
+    .footBox {
+        width: 316px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+	/* ----- Presets ----- */
+	p {
+		font-size: 12px;
+	}
+
+	/* ----- NavBar ----- */
+    .navText {
+        width: 750px;
+    }
+
+	h1 {
+		font-size: 24px;
+	}
+
+	li a {
+		font-size: 12px;
+	}
+
+	/* ----- Heading ----- */
+	h2 {
+		font-size: 38px;
+	}
+
+	/* ----- main ----- */
+	.heading {
+		width: 750px;
+	}
+
+	.heading h3 {
+		font-size: 48px;
+	}
+
+	.content {
+		width: 750px;
+	}
+
+	/* ----- About ----- */
+	.aContentBox {
+		width: 355px;
+	}
+
+	h5 {
+		font-size: 13px;
+	}
+
+	/* ----- Services ----- */
+    .sContentBox {
+		margin: 10px 25px;
+        width: 200px;
+    }
+
+	.sContentBox h4 {
+		font-size: 20px;
+	}
+	
+	/* ----- Contact Us ----- */
+	.contact {
+		height: 800px;
+	}
+	
+	.contentShow {
+		height: 400px;
+		width: 750px;
+	}
+	
+	.showBox {
+		margin: 10px;
+		height: 350px;
+		width: 350px;
+	}
+
+	/* ----- Footer ----- */
+    .footBox {
+		margin: 5px 20px;
+        width: 210px;
+    }
+
+	.footBox h4 {
+	    font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+    /* ----- NavBar ----- */
+    nav {
+        height: 80px;
+        width: 100%;
+    }
+
+    .deskNav {
+        display: none;
+    }
+
+    .navText {
+        margin-top: 20px;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .mobileNav {
+        display: block;
+        overflow: hidden;
+        padding-top: 20px;
+    }
+
+    .mobileNav h1 {
+        display: inline;
+        padding-left: 15px;
+    }
+
+    .mobileNav a {
+        color: #F2F2F2;
+        display: none;
+        float: left;
+        font-size: 17px;
+        padding: 14px 16px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .mobileNav a.icon {
+        border: none;
+        display: block;
+        float: right;
+        padding-top: 5px;
+    }
+
+    /* onClick */
+    .mobileNav.responsive {
+        background-color: #111;
+        position: relative;
+    }
+
+    .mobileNav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .mobileNav.responsive a {
+        display: block;
+        float: none;
+        text-align: center;
+    }
+
+    .mobileNav.responsive a:hover {
+        background-color: #D01A1A;
+    }
+
+    .mobileNav.responsive h1 {
+        display: none;
+    }
+
+	/* ----- Heading ----- */
+	h2 {
+		font-size: 28px;
+	}
+
+    /* ----- main ----- */
+    .sec {
+        height: 1100px;
+    }
+
+    .heading {
+        width: 100%;
+    }
+
+    .heading p {
+        margin: auto;
+        width: 95%;
+    }
+
+    .content {
+        margin: auto;
+        width: 95%;
+    }
+
+    /* ----- About ----- */
+    .about .content {
+        height: 800px;
+    }
+
+    .aContentBox {
+        float: none;
+        height: 500px;
+        margin: 0;
+        width: 100%;
+    }
+
+    #aPic {
+        height: auto;
+    }
+
+    .aContentBox img {
+        max-width: 760px;
+    }
+
+    #text {
+        height: 280px;
+        margin-top: 15px;
+        padding-left: 3px;
+    }
+
+    /* ----- Services ----- */
+    #serv {
+        height: 1000px;
+    }
+
+    #serv .content {
+        height: 600px;
+    }
+
+    .sContentBox {
+        float: none;
+        height: 100px;
+        margin: 0px auto 0px;
+        width: 95%;
+    }
+
+    .sContentBox h4 {
+        margin: 0px 0px 10px;
+    }
+
+    /* ----- Contact Us ----- */
+    .contact {
+        height: 1400px;
+    }
+
+    .contentShow {
+        height: 1100px;
+        margin: auto;
+        width: 95%;
+    }
+
+    .showBox {
+        float: none;
+        height: 500px;
+        margin: 0px 0px 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .showBox img {
+        max-width: 500px;
+        height: auto;
+    }
+
+    .showBox iframe {
+        max-width: 500px;
+    }
+
+    /* ----- Footer ----- */
+    footer {
+        height: 500px;
+    }
+
+    footer .content {
+        margin: 60px auto 0px;
+        height: 400px;
+        width: 95%;
+    }
+
+    .footBox {
+        float: none;
+        height: 120px;
+        margin: 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* ----- Heading ----- */
+    header {
+        height: 600px;
+    }
+
+    /* ----- main ----- */
+    .sec {
+        height: 950px;
+    }
+
+    /* ----- About ----- */
+    .about .content {
+        height: auto;
+    }
+
+    #text {
+        height: auto;
+    }
+
+    /* ----- Services ----- */
+    #serv {
+        height: 950px;
+    }
+
+    /* ----- Contact Us ----- */
+    .contact {
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    .contentShow {
+        height: auto;
+    }
+
+    #shop {
+        height: auto;
+    }
+
+    #map {
+        height: 400px;
+    }
+/*SOCIAL BUTTON*/
+#social {
+  left: 35px;
+  bottom: 35px;
+  position: fixed;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 99;
+}
+#icons a {
+  height: 0;
+  opacity: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 5px;
+  pointer-events: none;
+  text-decoration: none;
+  transition: all 0.2s linear 0s;
+}
+#icons.active a {
+  opacity: 1;
+  height: 60px;
+  pointer-events: auto;
+}
+#tl, #wa, #vb, #fb, #vk, #ml, #ms {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+#tl, #tl + .title {background: #44B4F4;}
+#wa, #wa + .title {background: #00D1B5;}
+#vb, #vb + .title {background: #AB74D4;}
+#fb, #fb + .title {background: linear-gradient(203.03deg, #FC5C73 6.71%, #963AFD 53.43%, #178AFF 89.56%);}
+#vk, #vk + .title {background: #2787F5;}
+#ml, #ml + .title {background: #4075FF;}
+#ms {
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  background: #07BB07;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: all 0.2s linear 0s;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+#ms.active {
+  transform: rotate(180deg);
+  background-color: #FFFFFF !important;
+  box-shadow: 0px 0px 12px rgba(7, 187, 7, 0.5);
+  background-image: url(../img/icons/cl.svg) !important;
+}
+#ms #wrap {
+  left: 0;
+  display: flex;
+  position: absolute;
+  transition: all 0.15s linear 0s;
+}
+#ms.active #wrap {
+  opacity: 0;
+}
+#ms #wrap div,
+#ms span {
+  width: 70px;
+  height: 70px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+#ms span {
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+}
+#icons .title {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 11px;
+  font: 11px/21px Tahoma;
+  transition: all 0.1s linear 0s;
+}
+#icons .title.active {
+  opacity: 1;
+  width: 85px;
+  margin-left: 15px;
+}
+
+/*CALL BUTTON*/
+.mobile-call-btn{
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(243, 197, 78);
+     background-color: #fff;
+     border: 2px solid #49B8B8;;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+    color:#49B8B8;
+    font-size: 20px;
+   text-align: center;
+   z-index: 10;
+   box-sizing: border-box;
+   
+}
+.mobile-call-btn:hover{
+    color: #000;
+}
+
+.mobile-call-btn i{
+    display: inline-block;
+  z-index: 2;
+  position: relative;
+  top: 2px;
+}
+.mobile-call-btn svg{
+  width: 26px;
+  
+}
+.mobile-call-btn:before,
+.mobile-call-btn:after{
+    content: '';
+    width: 70px;
+    height: 70px;
+    position: absolute;
+   border-radius: 50%;
+   border: 1px solid #49B8B8;
+   top: 50%;
+   left: 50%;
+   z-index: -1;
+   -webkit-transform: translate(-50%, -50%);
+       -ms-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
+  -webkit-animation-duration:  1.8s;
+          animation-duration:  1.8s; 
+  -webkit-animation-iteration-count: infinite; 
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function:  linear;
+          animation-timing-function:  linear;
+}
+.mobile-call-btn:before{
+    width: 90px;
+    height: 90px;
+}
+@media(max-width: 1023px) {
+    .mobile-call-btn{
+       width: 70px;
+       height: 70px; 
+       right: 35px;
+    bottom: 35px;
+    }
+    .mobile-call-btn:before,
+    .mobile-call-btn:after{
+        width: 70px;
+        height: 70px;
+    }
+    .mobile-call-btn:before{
+        width: 90px;
+        height: 90px;
+    }
+    .mobile-call-btn svg{
+  width: 26px;
+  
+}
+}
+@-webkit-keyframes pulse{
+  0%{
+   -webkit-transform: translate(-50%, -50%) scale(.5);
+    -ms-transform: translate(-50%, -50%) scale(.5);
+           transform: translate(-50%, -50%) scale(.5);
+  }
+  
+  
+   
+    100%{
+      -webkit-transform: translate(-50%, -50%) scale(1.1);
+       -ms-transform: translate(-50%, -50%) scale(1.1);
+              transform: translate(-50%, -50%) scale(1.1);
+    }
+
+  }
+  
+@keyframes pulse{
+  0%{
+   -webkit-transform: translate(-50%, -50%) scale(.5);
+    -ms-transform: translate(-50%, -50%) scale(.5);
+           transform: translate(-50%, -50%) scale(.5);
+  }
+  
+   
+    100%{
+      -webkit-transform: translate(-50%, -50%) scale(1.1);
+       -ms-transform: translate(-50%, -50%) scale(1.1);
+              transform: translate(-50%, -50%) scale(1.1);
+              opacity: 0;
+    }
+
+  }
+
+    </style>
 </head>
 <body>
-    <!-- Yeni Navigasyon Menüsü -->
-    <nav class="cyber-nav">
-        <div class="nav-container">
-            <a href="index.html" class="logo">CAR<span>//</span>SERVİS</a>
-            <div class="nav-links">
-                <a href="periyodik-bakim.html" class="nav-item">Periyodik Bakım</a>
-                <a href="motor-ariza-tespit.html" class="nav-item">Arıza Tespit</a>
-                <a href="yag-degisimi.html" class="nav-item">Yağ Değişimi</a>
-                <a href="toyota-servis.html" class="nav-item">Toyota Servis</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Güncellenmiş Hologram Header -->
+    <!-- Hologram Header -->
     <header class="hologram-header">
-        <div class="cyber-border header-content">
-            <h1>ANTALYA'NIN <span>OTO TAMİR</span> TEKNOLOJİ MERKEZİ</h1>
-            <div class="cta-buttons">
-                <a href="tel:05457120615" class="particle-button">Hemen Ara</a>
-                <a href="https://maps.app.goo.gl/..." target="_blank" class="particle-button">Yol Tarifi Al</a>
-            </div>
+        <div class="cyber-border" style="padding: 2rem; z-index: 1;">
+            <h1 style="font-size: 4rem; text-shadow: 0 0 20px var(--neon-blue);">
+                CAR<span style="color: var(--cyber-red);">//</span>SERVİS
+            </h1>
+            <p style="color: var(--matrix-green);">ANTALYA'NIN YENİ NESİL OTO TEKNOLOJİ MERKEZİ</p>
         </div>
     </header>
 
-    <!-- Ana Hizmetler Bölümü -->
-    <section class="main-services">
-        <h2 class="section-title">UZMANLIK ALANLARIMIZ</h2>
-        
-        <div class="service-grid">
-            <a href="periyodik-bakim.html" class="quantum-card service-card">
-                <h3>Periyodik Bakım</h3>
-                <p>Düzenli bakım ile aracınızın ömrünü uzatın</p>
-                <span class="more-info">Detaylı Bilgi →</span>
-            </a>
+    <!-- 3D Motor Model -->
+    <model-viewer 
+        alt="3D Motor Modeli"
+        src="https://antalya-arac-servisi.github.io/yag-bakimi-periyodik-bakim/assets/motor.glb"
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        environment-image="neutral"
+        auto-rotate
+        camera-controls>
+    </model-viewer>
 
-            <a href="motor-ariza-tespit.html" class="quantum-card service-card">
-                <h3>Motor Diagnostik</h3>
-                <p>Bilgisayarlı arıza tespit sistemleri</p>
-                <span class="more-info">Teknolojimizi Görün →</span>
-            </a>
-
-            <a href="yag-degisimi.html" class="quantum-card service-card">
-                <h3>Yağ Değişim</h3>
-                <p>15 dakikada express yağ değişimi</p>
-                <span class="more-info">Fiyat Listesi →</span>
-            </a>
-
-            <a href="toyota-servis.html" class="quantum-card service-card">
-                <h3>Toyota Servis</h3>
-                <p>Hibrit sistemlerde uzman servis</p>
-                <span class="more-info">Modelleri Gör →</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Güncellenmiş Harita ve İletişim Bölümü -->
-    <section class="contact-section">
-        <div class="map-container">
-            <iframe src=embed?pb=!1m18!1m12!1m3!1d6381.20054423914!2d30.639425479234916!3d36.89990980278741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c3912babff320d%3A0xdeb82b3dfd4f3e0d!2sCar%20Servis!5e0!3m2!1str!2str!4v1741729557003!5m2!1str!2str" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+    <!-- Quantum Hizmetler -->
+    <section class="service-matrix">
+        <div class="quantum-card">
+            <h3>Bilgisayarlı Arıza Tespiti</h3>
+            <p>Arızanızı Bilgisayar ile tespit edip en uygun çözümü sağlıyoruz</p>
         </div>
         
-        <div class="contact-info">
-            <h2>BİZE ULAŞIN</h2>
-            <div class="info-card">
-                <p>📍 Adres: [Tam Adres Bilgileriniz]</p>
-                <p>📞 Telefon: <a href="tel:05457120615">0545 712 06 15</a></p>
-                <p>⏰ Çalışma Saatleri: 08:00 - 19:00 (Pazar Kapalı)</p>
-                <div class="social-links">
-                    <a href="[WhatsApp]" class="social-icon">WhatsApp</a>
-                    <a href="[Google My Business]" class="social-icon">Google Yorum</a>
-                </div>
-            </div>
+        <div class="quantum-card">
+            <h3>Her marka aracınız için çözümler üretmek istiyoruz</h3>
+            <p>Öncesinde telefon ile bilgi alarak her marka ve modelden araçlarınıza uygun çözümler üretmek gibi bir gaye taşımaktayız. </p>
+        </div>
+
+        <div class="quantum-card">
+            <h3>ANTALYA YAĞ VE FİLTRE DEĞİŞİKLİĞİ</h3>
+            <p>Her bütçeye uygun seçenekler</p>
         </div>
     </section>
-
-    <!-- Yeni Footer -->
-    <footer class="cyber-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Hızlı Erişim</h4>
-                <ul>
-                    <li><a href="periyodik-bakim.html">Periyodik Bakım</a></li>
-                    <li><a href="motor-ariza-tespit.html">Arıza Tespit</a></li>
-                    <li><a href="yag-degisimi.html">Yağ Değişimi</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Belgelerimiz</h4>
-                <ul>
-                    <li><a href="#">Kalite Belgeleri</a></li>
-                    <li><a href="#">Sertifikalar</a></li>
-                    <li><a href="#">Garanti Şartları</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>İletişim</h4>
-                <p>© 2024 Car Servis</p>
-                <p>Tüm hakları saklıdır</p>
-                <p>Antalya Oto Sanayi Sitesi</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Eklenmesi Gereken CSS -->
-    <style>
-        /* Yeni Navigasyon Stili */
-        .cyber-nav {
-            background: rgba(10, 10, 15, 0.95);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            color: var(--neon-blue);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-item {
-            color: var(--matrix-green);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-item:hover {
-            color: var(--cyber-red);
-        }
-
-        /* Ana Hizmetler Grid */
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-        }
-
-        .service-card {
-            padding: 1.5rem;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .more-info {
-            color: var(--cyber-red);
-            display: block;
-            margin-top: 1rem;
-        }
-
-        /* İletişim Bölümü */
-        .contact-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            padding: 2rem;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 400px;
-            border: 2px solid var(--neon-blue);
-        }
-
-        .contact-info {
-            background: rgba(10, 10, 15, 0.9);
-            padding: 2rem;
-        }
-
-        /* Footer Stili */
-        .cyber-footer {
-            background: var(--bg-dark);
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .footer-section h4 {
-            color: var(--cyber-red);
-            margin-bottom: 1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section a {
-            color: var(--matrix-green);
-            text-decoration: none;
-        }
-    </style>
-
+  <div class = "contentShow">
+					<div id = "shop" class = "showBox">
+						<img src = "https://lh3.googleusercontent.com/p/AF1QipOl7ICKAb8Gqb3u_o9vltycHw8XYJKpCgYPLOXD=s0" alt = "front pic">
+					</div>
+					<div id = "map" class = "showBox">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6381.20054423914!2d30.639425479234916!3d36.89990980278741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c3912babff320d%3A0xdeb82b3dfd4f3e0d!2sCar%20Servis!5e0!3m2!1str!2str!4v1741729557003!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</iframe>
+					</div></div>
+	<!--BUTTON CALL PHONE -->
+<a href="tel:05457120615" class="mobile-call-btn">
+  <i>
+      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+        </svg>  
+  </i>
+</a>
     <!-- Dinamik Veri Yükleme -->
     <script type="module">
         // GSAP Animasyon Kütüphanesi
